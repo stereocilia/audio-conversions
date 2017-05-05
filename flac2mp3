@@ -1,0 +1,5 @@
+mkdir mp3
+for file in *.flac
+do
+  ffmpeg -i "$file" -ac 2 -b:a 320k "mp3/${file%.*}.mp3" 
+done

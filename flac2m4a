@@ -1,0 +1,5 @@
+mkdir m4a
+for file in *.flac
+do
+  ffmpeg -y -i "$file" -ac 2 -acodec aac -strict -2 "m4a/${file%.*}.m4a" 
+done
